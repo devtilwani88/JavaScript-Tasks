@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+    <style>
+
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            flex-direction: column;
+        }
+
+        #data{
+            background-color: yellow;
+            width: 50%;
+            height: 100px;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            word-spacing: 5px;
+        }
+    
+        h1{
+        font-size: 50px;
+        font-family: Verdana;
+        color: red;
+       }
+       
+        </style>
+</head>
+<body>
+    <div class="main">
+        <h1>RANDOM NUMBERS</h1>
+
+        
+        <div id="data"></div>
+    </div>
+
+    <script>
+        
+                
+            
+            for(i=1;i<=10;i++){
+                n= (Math.floor(Math.random()*67)+33);
+                document.getElementById('data').innerHTML+=n+"  ";       
+            }
+    
+            </script>
+</body>
+</html>

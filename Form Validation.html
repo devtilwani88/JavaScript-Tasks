@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+
+    <script>
+        function validateForm(){
+            let sn=document.regform.sname;
+            let sp=document.regform.spwd;
+            let cp=document.regform.cpwd;
+
+            if(sn.value=="" || sn.value==null){
+                alert("Student Name should bot be blank");
+                return false;
+                sn.focus();
+            }
+            if(cp.value!=sp.value){
+                alert("Password Should Match");
+                cp.focus();
+                return false;
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <form action="#" method="post" name="regform">
+        <h1>Registration Form</h1>
+        <label for="sname">Student Name</label>
+        <input type="text" name="sname"/><br><br>
+
+        <label for="uname">Username</label>
+        <input type="text" name="uname"/><br><br>
+
+        <label for="spwd">Set Password</label>
+        <input type="password" name="spwd"/><br><br>
+
+        <label for="cpwd">Confirm Password</label>
+        <input type="password" name="cpwd"/><br><br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="M">Male
+        <input type="radio" name="gender" value="F">Female <br><br>
+
+        <input type="submit" value="Submit Form" name="submit" onclick="return validateForm()">
+        <input type="reset" value="Reset Form" name="reset">
+
+    </form>
+    <script>
+       
+        let x=document.querySelectorAll('label');
+        for(i=0;i<x.length;i++){
+            x[i].style.color='#ff0000';
+            x[i].style.textDecoration='underline';
+            x[i].style.fontFamily='arial';
+            x[i].style.fontWeight='bolder';
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Input</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            height: 100vh;
+            background-color: darkolivegreen;
+        }
+        #first{
+            height: 50px;
+            width: 30%;
+            background-color: rgb(19, 102, 146);
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: chartreuse;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        #label{
+            color: red;
+            background-color: black;
+            border: 2px solid aqua;
+            padding: 5px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        input{
+                border: 2px solid aqua;
+                border-radius: 15px;
+                background-color: khaki;
+                color: red;
+                padding: 5px;
+                font-size: 18px;
+        }
+        button{
+            background-color: purple;
+            color: gold;
+            border: 2px solid black;
+            border-top-right-radius: 18px;
+            border-bottom-left-radius: 18px;
+            padding: 15px;
+            font-size: x-large;
+            font-weight: 900;
+        }
+        button:hover{
+            color: purple;
+            background-color: gold;
+            border-top-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="second">
+            <label for="name" id="label">ENTER YOUR NAME</label>
+            <input type="text"  id="name">
+        </div>
+        <button id="generate" onclick="generate()">Generate</button>
+        <div id="first"></div>
+    </div>
+
+    <script>
+        function generate(){
+            let n=document.getElementById('name').value;
+            let ans=document.getElementById('first');
+
+            
+            ans.innerHTML=n;
+        }
+    </script>
+</body>
+</html>

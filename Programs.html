@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs</title>
+    <style>
+       
+
+        label{
+            font-size: xx-large;
+            font-weight: 900;
+            color: blue;
+        }
+        input{
+            background-color: black;
+            color: white;
+            font-size: x-large;
+            font-family: monospace;
+            font-weight: 800;
+            border: 3px solid  blue;
+        }
+
+       h1{
+        font-size: 50px;
+        font-family: Verdana;
+        color: red;
+       }
+        #ans{
+            background-color: rgb(0, 0, 0);
+            color: yellow;
+            font-weight: 900;
+            font-size: xx-large;
+            margin: 0 auto;
+            width: 50%;
+            /* text-align: center; */
+        }
+        button{
+            margin: 8px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            background-color: rgb(158, 0, 0);
+            color: rgb(21, 255, 0);
+            padding: 8px;
+            border: 3px solid  black;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Various Programs</h1>
+    <label for="myInput">Enter N : </label>
+    <input type="number" name="" id="myInput" size="10">
+    <br>
+    <button id="p1" onclick="myFun('1')">1 to N</button>
+    <button id="p3" onclick="myFun('2')">Table of N</button>
+
+    <div id="ans">
+
+    </div>
+
+    <script>
+
+
+        function fun1() {
+                var n=document.getElementById('myInput').value
+                let result=document.getElementById('ans');
+                result.innerHTML='';
+                for(i=1;i<=n;i++){
+                result.innerHTML+=i+" ";
+                console.log(i);
+            }
+        }
+
+        function fun2() {
+                var n=document.getElementById('myInput').value
+                let result=document.getElementById('ans');
+                result.innerHTML='';
+                for(i=1;i<=10;i++){
+                result.innerHTML+=n+" x "+i+" = "+(i*n)+"<br>";
+                console.log(i);
+                  }
+               }
+
+           function myFun(n){
+           switch(n){
+              case '1': fun1();
+                        break;
+
+             case '2':   fun2();
+                        break;
+            }
+        }  
+       
+      
+
+
+        
+    </script>
+</body>
+</html>

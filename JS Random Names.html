@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Names</title>
+</head>
+<body>
+    <style>
+        #data{
+            background-color: yellow;
+            font-weight: 900;
+            font-size: x-large;
+            margin: 0 auto;
+            width: 50%;
+            line-height: 50px;
+            text-align: center;
+        }
+        h1{
+        font-size: 40px;
+        font-family: Verdana;
+        color: blue;
+       }
+    </style>
+    <h1>RANDOM NAMES</h1>
+    <div id="data"></div>
+
+    <script>
+        function getName(){
+        const names=["Ajay","Vijay","Sunil","Deepak","Umang","Kabir","Sidharth","Dev","Ramesh","Rishi","Kamal","Bhavesh","Dipesh","Chirag","Bharat","Tinu","Rajesh","Shayam","Shubham","Suresh"];
+        const snames=["Tiwari","Shah","Patel","Modi","Kapoor","Singh","Mishra","Shukla","Kumar","Sharama","Pandey","Gupta","Iyer","Joshi","Deol","Bhatt","Ahuja","Reddy","Roy","Rajput"];
+
+        return (names[Math.floor(Math.random()*names.length)]+" "+snames[Math.floor(Math.random()*snames.length)]);
+        }
+
+        for(i=1;i<=10;i++){
+        name=getName();
+        let d=document.getElementById('data');
+        d.style.color="red";
+        d.innerHTML+=name+"<br>";
+        }     
+    </script>
+</body>
+</html>
